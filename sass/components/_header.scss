@@ -1,0 +1,120 @@
+.header {
+  border-bottom: 1px solid #eeeeee;
+
+  /* задаем флекс и центрирование контейнеру */
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* оформление логотипа Верхний и нижний логотип */
+.logo {
+  color: $title-text-color;
+  font-family: Raleway, sans-serif;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+/* Оформление части лого цветом */
+.header__logo--black {
+  color: $acsent-color;
+}
+
+/*Навигационная часть*/
+/* задаем флекс и центр */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__site-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* задаем боковые маржины кроме последнего */
+.header__site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* ссылки site-nav  */
+.header__site-nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $acsent-color;
+    fill: $acsent-color;
+  }
+  /* выделение текущей страницы синим*/
+  &--current {
+    position: relative;
+    color: $acsent-color;
+  }
+  /* выделение текущей страницы синим подчеркиванием*/
+  &--current::after {
+    display: block;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 4px;
+
+    background-color: $acsent-color;
+    border-radius: 2px;
+    bottom: -1px;
+  }
+}
+
+.header__contacts-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+/* последний отступ */
+.header__contacts-nav-item:last-child {
+  margin-left: 50px;
+}
+
+.header__contacts-nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: currentColor;
+
+  transition: color $duration $timing-function;
+  /* Ховер и фокус на ссылки site-nav contacts-nav */
+  &:hover,
+  &:focus {
+    color: $acsent-color;
+    fill: $acsent-color;
+  }
+}
+.header__contacts-nav-icon-email,
+.header__contacts-nav-icon-smartphone {
+  margin-right: 10px;
+  fill: currentColor;
+}
