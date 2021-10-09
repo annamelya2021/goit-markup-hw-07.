@@ -116,6 +116,12 @@
     background-size: cover;
     border-radius: 2px;
   }
+  &::before {
+    background-color: $acsent-color;
+    background-image: url(../img/check.svg);
+    background-size: cover;
+    border-radius: 2px;
+  }
 }
 
 .form__agreement {
@@ -141,7 +147,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:checked ~ .form__agreement-text::before {
+  &:checked {
     background-color: $acsent-color;
     background-image: url(../img/check.svg);
     background-size: cover;
